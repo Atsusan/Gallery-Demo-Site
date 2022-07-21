@@ -3,15 +3,15 @@
 
 // ハンバーガーメニュー
 
-// const btn = document.querySelector('.btn-open');
-// const body = document.querySelector('body');
-// btn.addEventListener('click', () => body.classList.toggle('open'));
+const btn = document.querySelector('.btn-open');
+const body = document.querySelector('body');
+btn.addEventListener('click', () => body.classList.toggle('open'));
 
-$(function () {
-    $('.btn-open').click(function() {
-        $('body').toggleClass('open');
-    });
-});
+// $(function () {
+//     $('.btn-open').click(function() {
+//         $('body').toggleClass('open');
+//     });
+// });
 
 
 
