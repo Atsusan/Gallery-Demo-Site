@@ -218,7 +218,7 @@ open
 .works-content .works-list {
   display: -ms-grid;
   display: grid;
-  gap: 25px;
+  gap: 20px;
   -ms-grid-columns: (150px)[auto-fit];
       grid-template-columns: repeat(auto-fit, 150px);
   -webkit-box-align: center;
@@ -231,6 +231,7 @@ open
 
 @media screen and (min-width: 1025px) {
   .works-content .works-list {
+    gap: 25px;
     -ms-grid-columns: (250px)[auto-fit];
         grid-template-columns: repeat(auto-fit, 250px);
   }

@@ -224,12 +224,13 @@ open
 .works-content {
   & .works-list {
     display: grid;
-    gap: 25px;
+    gap: 20px;
     grid-template-columns: repeat(auto-fit, 150px);
     align-items: center;
     justify-content: center;
 
     @include mq(pc) {
+      gap: 25px;
       grid-template-columns: repeat(auto-fit, 250px);
     }
 
