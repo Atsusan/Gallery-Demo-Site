@@ -1,0 +1,392 @@
+@charset "UTF-8";
+/* =============================================
+  @mixin
+============================================= */
+/* remの計算 */
+/* ブレイクポイント */
+/* =============================================
+  カラー、フォントサイズの指定
+============================================= */
+/* =============================================
+  Bass
+============================================= */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-size: 1rem;
+  font-family: "Dosis", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", cursive;
+  letter-spacing: 0.05em;
+  line-height: 1.6;
+  color: #eee;
+  background: #131d32;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: inherit;
+}
+
+img {
+  vertical-align: bottom;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 4%;
+}
+
+.section {
+  padding: 10rem 0;
+}
+
+.section-title {
+  font-size: 1.625rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-align: center;
+  padding-bottom: 60px;
+}
+
+/* =============================================
+  header
+============================================= */
+.header {
+  margin-top: 20px;
+  padding-bottom: 20px;
+}
+
+.header .header-logo {
+  width: 100px;
+}
+
+.header .header-logo img {
+  width: 100%;
+}
+
+.header .header-nav-list {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+}
+
+.header .header-nav-list .nav-list {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 50px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .header-nav-list {
+  display: none;
+}
+
+body.open .header-nav-list {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+}
+
+body.open .header-nav-list .nav-list {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 50px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* =============================================
+open
+============================================= */
+.btn {
+  width: 26px;
+  height: 26px;
+}
+
+.btn-open {
+  position: fixed;
+  top: 55px;
+  right: 55px;
+}
+
+@media screen and (min-width: 1025px) {
+  .btn-open {
+    right: 20%;
+  }
+}
+
+.btn-open span {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #eee;
+  top: 13px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.btn-open span::before, .btn-open span::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #eee;
+}
+
+.btn-open span::before {
+  top: -10px;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+.btn-open span::after {
+  top: 10px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.open .btn-open span {
+  background-color: transparent;
+}
+
+.open .btn-open span::before {
+  -webkit-transform: translateY(10px) rotate(-315deg);
+          transform: translateY(10px) rotate(-315deg);
+}
+
+.open .btn-open span::after {
+  -webkit-transform: translateY(-10px) rotate(135deg);
+          transform: translateY(-10px) rotate(135deg);
+}
+
+/* =============================================
+  メインビジュアル
+============================================= */
+.mv {
+  height: 40vh;
+}
+
+.mv img {
+  width: 100%;
+  height: 100%;
+}
+
+/* =============================================
+  works
+============================================= */
+.works-content .works-list {
+  display: -ms-grid;
+  display: grid;
+  gap: 25px;
+  -ms-grid-columns: (150px)[auto-fit];
+      grid-template-columns: repeat(auto-fit, 150px);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (min-width: 1025px) {
+  .works-content .works-list {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (300px)[autfit];
+        grid-template-columns: repeat(autfit, 300px);
+  }
+}
+
+.works-content .works-list .works-item {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+/* =============================================
+  footer
+============================================= */
+footer {
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/*============================
+ページトップ：ギミック
+=============================*/
+#page-top {
+  position: fixed;
+  bottom: 70px;
+  right: 30px;
+  font-size: 20px;
+  z-index: 99;
+}
+
+#page-top a {
+  color: #6a91c1;
+  width: 50px;
+  height: 50px;
+  border: 1px solid;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0.9;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#page-top a:hover {
+  opacity: 0.5;
+}
+
+@media screen and (min-width: 1025px) {
+  #page-top {
+    bottom: 30px;
+    right: 15%;
+  }
+}
+
+/*============================
+モーダル
+=============================*/
+.modal-overlay {
+  display: none;
+  position: fixed;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-img-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: auto;
+  position: relative;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1025px) {
+  .modal-img-box {
+    width: 55%;
+  }
+}
+
+.modal-img-box span {
+  position: absolute;
+  -webkit-transform: translate(90%, -90%);
+          transform: translate(90%, -90%);
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+}
+
+.modal-img-box span::before,
+.modal-img-box span::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+}
+
+.modal-img-box span::before {
+  -webkit-transform: translate(0, 15px) rotate(45deg);
+          transform: translate(0, 15px) rotate(45deg);
+}
+
+.modal-img-box span::after {
+  -webkit-transform: translate(0, 15px) rotate(-45deg);
+          transform: translate(0, 15px) rotate(-45deg);
+}
+
+.modal-img-box img {
+  max-width: 70%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media screen and (min-width: 1025px) {
+  .modal-img-box img {
+    width: 30%;
+  }
+}
+
+.js-item {
+  cursor: pointer;
+}
+/*# sourceMappingURL=style.css.map */
