@@ -165,7 +165,7 @@ open
 
     & span {
       position: absolute;
-      width: 100%;
+      width: 26px;
       height: 2px;
       background-color: $cGray;
       top: 13px;
@@ -175,7 +175,7 @@ open
       &::after {
         content: "";
         position: absolute;
-        width: 100%;
+        width: 26px;
         height: 2px;
         background-color: $cGray;
       }
@@ -230,8 +230,7 @@ open
     justify-content: center;
 
     @include mq(pc) {
-      display: grid;
-      grid-template-columns: repeat(autfit, 300px);
+      grid-template-columns: repeat(auto-fit, 250px);
     }
 
     & .works-item {
