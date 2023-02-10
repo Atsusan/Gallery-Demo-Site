@@ -13,8 +13,7 @@
 *,
 *::before,
 *::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -38,8 +37,7 @@ a:hover {
 img {
   vertical-align: bottom;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .container {
@@ -67,15 +65,12 @@ img {
   margin-top: 20px;
   padding-bottom: 20px;
 }
-
 .header .header-logo {
   width: 100px;
 }
-
 .header .header-logo img {
   width: 100%;
 }
-
 .header .header-nav-list {
   display: none;
   background-color: rgba(0, 0, 0, 0.7);
@@ -85,23 +80,13 @@ img {
   top: 0;
   right: 0;
 }
-
 .header .header-nav-list .nav-list {
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 50px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 body.open .header-nav-list {
@@ -115,29 +100,24 @@ open
   width: 26px;
   height: 26px;
 }
-
 .btn-open {
   position: fixed;
   top: 55px;
   right: 55px;
 }
-
 @media screen and (min-width: 1025px) {
   .btn-open {
     right: 20%;
   }
 }
-
 .btn-open span {
   position: absolute;
   width: 26px;
   height: 2px;
   background-color: #eee;
   top: 13px;
-  -webkit-transition: all .3s;
-  transition: all .3s;
+  transition: all 0.3s;
 }
-
 .btn-open span::before, .btn-open span::after {
   content: "";
   position: absolute;
@@ -145,31 +125,29 @@ open
   height: 2px;
   background-color: #eee;
 }
-
 .btn-open span::before {
   top: -10px;
-  -webkit-transition: all .4s;
-  transition: all .4s;
+  transition: all 0.4s;
 }
-
 .btn-open span::after {
   top: 10px;
-  -webkit-transition: all .3s;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 .open .btn-open span {
   background-color: transparent;
 }
-
 .open .btn-open span::before {
-  -webkit-transform: translateY(10px) rotate(-315deg);
-          transform: translateY(10px) rotate(-315deg);
+  transform: translateY(10px) rotate(-315deg);
+}
+.open .btn-open span::after {
+  transform: translateY(-10px) rotate(135deg);
 }
 
-.open .btn-open span::after {
-  -webkit-transform: translateY(-10px) rotate(135deg);
-          transform: translateY(-10px) rotate(135deg);
+.nav-list > p {
+  margin-top: 5px;
+  text-align: center;
+  font-size: 14px;
 }
 
 /* =============================================
@@ -178,7 +156,6 @@ open
 .mv {
   height: 40vh;
 }
-
 .mv img {
   width: 100%;
   height: 100%;
@@ -188,30 +165,20 @@ open
   works
 ============================================= */
 .works-content .works-list {
-  display: -ms-grid;
   display: grid;
   gap: 20px;
-  -ms-grid-columns: (150px)[auto-fit];
-      grid-template-columns: repeat(auto-fit, 150px);
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  grid-template-columns: repeat(auto-fit, 150px);
+  align-items: center;
+  justify-content: center;
 }
-
 @media screen and (min-width: 1025px) {
   .works-content .works-list {
     gap: 25px;
-    -ms-grid-columns: (250px)[auto-fit];
-        grid-template-columns: repeat(auto-fit, 250px);
+    grid-template-columns: repeat(auto-fit, 250px);
   }
 }
-
 .works-content .works-list .works-item {
-  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
-          box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
 
 /* =============================================
@@ -219,15 +186,9 @@ open
 ============================================= */
 footer {
   height: 60px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 /*============================
@@ -240,31 +201,21 @@ footer {
   font-size: 20px;
   z-index: 99;
 }
-
 #page-top a {
   color: #6a91c1;
   width: 50px;
   height: 50px;
   border: 1px solid;
   border-radius: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   opacity: 0.9;
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-
 #page-top a:hover {
   opacity: 0.5;
 }
-
 @media screen and (min-width: 1025px) {
   #page-top {
     bottom: 30px;
@@ -278,12 +229,8 @@ footer {
 .modal-overlay {
   display: none;
   position: fixed;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   top: 0;
   left: 0;
   z-index: 200;
@@ -295,18 +242,13 @@ footer {
 }
 
 .modal-img-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   width: 100%;
   height: auto;
   position: relative;
   margin: 0 auto;
 }
-
 @media screen and (min-width: 1025px) {
   .modal-img-box {
     width: 55%;
@@ -315,8 +257,7 @@ footer {
 
 .modal-img-box span {
   position: absolute;
-  -webkit-transform: translate(90%, -90%);
-          transform: translate(90%, -90%);
+  transform: translate(90%, -90%);
   top: 0;
   right: 0;
   cursor: pointer;
@@ -336,21 +277,17 @@ footer {
 }
 
 .modal-img-box span::before {
-  -webkit-transform: translate(0, 15px) rotate(45deg);
-          transform: translate(0, 15px) rotate(45deg);
+  transform: translate(0, 15px) rotate(45deg);
 }
 
 .modal-img-box span::after {
-  -webkit-transform: translate(0, 15px) rotate(-45deg);
-          transform: translate(0, 15px) rotate(-45deg);
+  transform: translate(0, 15px) rotate(-45deg);
 }
 
 .modal-img-box img {
   max-width: 70%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
-
 @media screen and (min-width: 1025px) {
   .modal-img-box img {
     width: 30%;
@@ -360,4 +297,3 @@ footer {
 .js-item {
   cursor: pointer;
 }
-/*# sourceMappingURL=style.css.map */
